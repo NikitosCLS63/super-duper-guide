@@ -1,0 +1,29 @@
+﻿<Window x:Class="WordLekcia.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WordLekcia"
+        mc:Ignorable="d"
+        Title="Window1" Height="500" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="5">
+            <TextBox x:Name="ColumnNameTextBox" Width="200" Margin="5"/>
+            <Button Content="Добавить столбец" Click="AddColumnButton_Click" Margin="5"/>
+        </StackPanel>
+
+        <DataGrid x:Name="griiiiiid" Grid.Row="1" AutoGenerateColumns="True"/>
+
+        <Button Grid.Row="2" Content="Экспортировать" Click="ExportButton_Click"/>
+        <Button Grid.Row="3" Content="Импортировать" Click="ImportButton_Click"/>
+        <Button Grid.Row="4" Content="Отправить" Click="SendButton_Click"/>
+    </Grid>
+</Window>
